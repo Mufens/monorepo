@@ -1,0 +1,16 @@
+{
+  "name": "monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:vue": "pnpm --filter vue2-app dev",   
+    "dev:react": "pnpm --filter react-app dev", 
+    "dev:all": "pnpm -r --parallel dev",               
+    "build:all": "pnpm -r build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
