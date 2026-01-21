@@ -1,16 +1,15 @@
 {
   "name": "monorepo",
-  "private": true,
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:vue": "pnpm --filter vue2-app dev",   
-    "dev:react": "pnpm --filter react-app dev", 
-    "dev:all": "pnpm -r --parallel dev",               
-    "build:all": "pnpm -r build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "dev:main": "pnpm --filter main dev",
+    "dev:react": "pnpm --filter react-app dev",
+    "dev:vue2": "pnpm --filter vue2-app serve",
+    "dev:vue3": "pnpm --filter vue3-app dev",
+    "dev": "node ./scripts/start.js",
+    "build:all": "pnpm --filter main build && pnpm --filter react-app build && pnpm --filter vue2-app build && pnpm --filter vue3-app build"
+  }
 }
